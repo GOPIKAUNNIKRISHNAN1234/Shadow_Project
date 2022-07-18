@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220717 18:26:10.431" rpa="false" schemaversion="2">
+<suite id="s1" name="TC 5 Add Contact Validate" source="D:\L&amp;T_Tech\Python_Program\AndroidProject\Mobile_Appium_Suite\TC_5_Add_Contact_Validate.robot">
+<test id="s1-t1" name="TC_5:Add_Contact_Automation">
+<kw name="Add Contact" library="Common_Functionality">
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${Phone_number}</arg>
+<doc>This Keyword will create a new contact in the android device</doc>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220717 18:26:10.913" endtime="20220717 18:26:10.913"/>
+</kw>
+<kw name="Launch Contact App" library="Common_Functionality">
+<doc>This Keyword will Launch the Contact Application in your Android Device</doc>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=${device_Name}</arg>
+<arg>appPackage=com.google.android.contacts</arg>
+<arg>appActivity=com.google.android.apps.contacts.activities.PeopleActivity</arg>
+<arg>noReset=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220717 18:26:10.913" endtime="20220717 18:26:21.011"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220717 18:26:21.011" endtime="20220717 18:26:21.011"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220717 18:26:21.011" endtime="20220717 18:26:21.011"/>
+</kw>
+<status status="PASS" starttime="20220717 18:26:10.913" endtime="20220717 18:26:21.011"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=floating_action_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:21.027" level="INFO">Clicking element 'id=floating_action_button'.</msg>
+<status status="PASS" starttime="20220717 18:26:21.011" endtime="20220717 18:26:22.202"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@text="First name"]</arg>
+<arg>${first_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:22.212" level="INFO">Typing text 'Test' into text field 'xpath=//android.widget.EditText[@text="First name"]'</msg>
+<status status="PASS" starttime="20220717 18:26:22.202" endtime="20220717 18:26:26.033"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@text="Last name"]</arg>
+<arg>${last_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:26.042" level="INFO">Typing text 'Number' into text field 'xpath=//android.widget.EditText[@text="Last name"]'</msg>
+<status status="PASS" starttime="20220717 18:26:26.033" endtime="20220717 18:26:28.041"/>
+</kw>
+<kw name="Input Value" library="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@text="Phone"]</arg>
+<arg>${Phone_number}</arg>
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<msg timestamp="20220717 18:26:28.057" level="INFO">Setting text '8011843631' into text field 'xpath=//android.widget.EditText[@text="Phone"]'</msg>
+<status status="PASS" starttime="20220717 18:26:28.047" endtime="20220717 18:26:31.141"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@text="Save"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:31.151" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="Save"]'.</msg>
+<status status="PASS" starttime="20220717 18:26:31.141" endtime="20220717 18:26:34.031"/>
+</kw>
+<status status="PASS" starttime="20220717 18:26:10.913" endtime="20220717 18:26:34.031"/>
+</kw>
+<kw name="Validate Contact" library="Common_Functionality">
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${Phone_number}</arg>
+<doc>This Keyword will validate a newly created contact in the android device</doc>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220717 18:26:34.036" endtime="20220717 18:26:34.036"/>
+</kw>
+<kw name="Launch Contact App" library="Common_Functionality">
+<doc>This Keyword will Launch the Contact Application in your Android Device</doc>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=${device_Name}</arg>
+<arg>appPackage=com.google.android.contacts</arg>
+<arg>appActivity=com.google.android.apps.contacts.activities.PeopleActivity</arg>
+<arg>noReset=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220717 18:26:34.036" endtime="20220717 18:26:45.391"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220717 18:26:45.391" endtime="20220717 18:26:45.391"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220717 18:26:45.391" endtime="20220717 18:26:45.391"/>
+</kw>
+<status status="PASS" starttime="20220717 18:26:34.036" endtime="20220717 18:26:45.391"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220717 18:26:47.392" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220717 18:26:45.391" endtime="20220717 18:26:47.392"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="Search contacts"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:47.401" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="Search contacts"]'.</msg>
+<status status="PASS" starttime="20220717 18:26:47.392" endtime="20220717 18:26:49.062"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=open_search_view_edit_text</arg>
+<arg>${first_name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220717 18:26:49.062" level="INFO">Typing text 'Test' into text field 'id=open_search_view_edit_text'</msg>
+<status status="PASS" starttime="20220717 18:26:49.062" endtime="20220717 18:26:50.342"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${last_name}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220717 18:26:50.342" endtime="20220717 18:26:53.331"/>
+</kw>
+<status status="PASS" starttime="20220717 18:26:34.036" endtime="20220717 18:26:53.331"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220717 18:26:53.331" endtime="20220717 18:26:53.331"/>
+</kw>
+<status status="PASS" starttime="20220717 18:26:10.913" endtime="20220717 18:26:53.331"/>
+</test>
+<status status="PASS" starttime="20220717 18:26:10.431" endtime="20220717 18:26:53.342"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 5 Add Contact Validate">TC 5 Add Contact Validate</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
